@@ -17,7 +17,7 @@ public class StockController {
 	
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/getStocks")
-	public ResponseEntity<List<Stock>> retrieveAllUsers() {
+	public ResponseEntity<List<Stock>> retrieveStocks() {
 		List<Stock> stocks = stockRepository.findAll();
 		stocks.stream().forEach(s-> s.setMid((s.getBid()+s.getAsk())/2));
 		return new  ResponseEntity<List<Stock>>(stocks, HttpStatus.OK);

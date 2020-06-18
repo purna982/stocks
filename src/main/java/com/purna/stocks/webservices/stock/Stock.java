@@ -49,6 +49,13 @@ public class Stock implements Serializable{
 		this.eventTime = eventTime;
 	}
 
+	public Stock(String status, String name, double bid, double ask, Date eventTime) {
+		this.status = status;
+		this.name = name;
+		this.bid = bid;
+		this.ask = ask;
+		this.eventTime = eventTime;
+	}
 	public Integer getId() {
 		return id;
 	}
